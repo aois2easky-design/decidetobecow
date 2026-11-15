@@ -24,10 +24,10 @@ const context = vm.createContext({
   setTimeout: () => 0, clearTimeout() {}, setInterval: () => 0, clearInterval() {}
 });
 const source = await readFile(new URL('../public/app.js', import.meta.url), 'utf8');
-vm.runInContext(source.replace(/\ninit\(\);\s*$/, ''), context);
+vm.runInContext(source.replace(/\ninit\(\);/, ''), context);
 await vm.runInContext('init()', context);
 const catalog = JSON.parse(await readFile(new URL('../public/catalog.json', import.meta.url), 'utf8'));
-const routes = ['home', 'cows', 'experience', 'shop', 'my', 'about', 'gallery', 'learn',
+const routes = ['home', 'cows', 'experience', 'shop', 'my', 'about', 'gallery', 'learn', 'naming', ...catalog.cows.map((_, i) => 'issue/' + i),
   ...catalog.cows.map(c => 'cow/' + c.id),
   ...catalog.products.map(p => 'product/' + p.id),
   ...catalog.farms.map(f => 'farm/' + f.id),
@@ -47,7 +47,11 @@ vm.runInContext("chooseFavorite('kurumi')", context);
 assert.equal(JSON.parse(storage.get('cow-companion-v2')).favorite, 'kurumi');
 context.location.hash = '#home';
 vm.runInContext('render()', context);
-assert(element('main').innerHTML.includes('くるみに会いにいく'));
+context.location.hash = '#issue/3';
+vm.runInContext('render()', context);
+assert(element('main').innerHTML.includes('推し牛に選択済み'));
+vm.runInContext('turnMagazine(1)',context);
+assert.equal(context.location.hash,'issue/4');
 vm.runInContext("actions['cow-filter']({dataset:{id:'のんびり屋さん'}})", context);
 context.location.hash = '#cows';
 vm.runInContext('render()', context);

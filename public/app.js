@@ -149,19 +149,19 @@ function galleryMarkup(limit = 6) {
 }
 
 function homePage() {
-  const cow = currentCow();
-  const farm = farmById(cow.farmId);
-  return `<section class="editorial-hero reveal">
-    <div class="hero-editorial-copy"><span class="edition-label"><i></i> THE SLOW LIFE, WITH COWS.</span><h1>今日は、<br><span>牛のペースで。</span></h1><p class="hero-intro">がんばる毎日に、<br>牧場の余白を、ひとさじ。</p><p class="hero-description">一頭と出会って、ゆっくり知って、好きになる。<br>牛とあなたの、ちいさな物語をはじめよう。</p><a class="btn hero-cta" href="#${favoriteCow() ? 'cow/' + e(cow.id) : 'cows'}">${favoriteCow() ? e(cow.name) + 'に会いにいく' : 'わたしの推し牛を見つける'} <span>↗</span></a><div class="hero-footnote"><span>MEET. SLOW DOWN. FEEL CLOSER.</span><span>SCROLL TO THE FARM ↓</span></div></div>
-    <div class="hero-editorial-image"><img class="cover-cow" src="${imageUrl(cow.photo)}" alt="牧場でこちらを見つめる牛のイメージ写真" fetchpriority="high" width="1000" height="1200"><div class="hero-image-shade"></div><span class="image-index">OUR LITTLE FARM / 01</span><div class="round-stamp" aria-hidden="true">HELLO,<br><em>COW!</em><span>ゆっくり、いこう。</span></div><a class="hero-cow-caption" href="#cow/${e(cow.id)}"><span><small>今日、目が合ったのは。</small><strong>${e(cow.name)}<em>${e(farm.name)} / 体験用プロフィール</em></strong></span><b>↗</b></a><span class="image-disclaimer">PHOTOGRAPH FOR ILLUSTRATION</span></div>
-  </section>
-  <div class="field-ribbon"><span>A GOOD DAY STARTS SLOW.</span><i>✳</i><span>食べて、休んで、ときどき、もぐもぐ。</span><i>✳</i><span>MEET YOUR FAVORITE COW.</span><i>✳</i></div>
-  <section class="wrap section meet-section"><div class="section-head"><div><span class="eyebrow">01 / MEET YOUR COW</span><h2>好きになるのは、<br class="mobile-break">きっと一瞬。</h2><p class="sub muted">まっすぐな瞳も、のんびりした横顔も。<br>あなたは、どの子が気になる？</p></div><a class="circle-link" href="#cows"><span>みんなに会う</span><b>↗</b></a></div><div class="grid cow-grid home-cows">${catalog.cows.slice(0, 4).map(cowCard).join('')}</div><p class="photo-context">名前や性格は体験用の物語です。写真の牛と実在のプロフィールを結び付けるものではありません。</p></section>
-  <section class="slow-feature"><div class="slow-feature-photo"><img src="${imageUrl(catalog.featurePhoto || cow.photo)}" alt="草地で過ごす牛たちのイメージ写真" loading="lazy" width="1000" height="900"><span class="photo-caption">A MOMENT IN THE MEADOW / 写真はイメージ</span></div><div class="slow-feature-copy"><span class="eyebrow">02 / BECOME A LITTLE CLOSER</span><span class="handwritten">take it mooo easy.</span><h2>何もしない、を。<br>今日は、してみる。</h2><p>ゆっくり食べる。ひと息つく。<br>いつもの景色を、もう一度見る。<br>牛の暮らしをヒントに、あなたにも小さな休息を。</p><a class="btn light" href="#experience/${e(cow.id)}">今日の「牛になる」を選ぶ <span>→</span></a><div class="experience-meta"><span>20の小さな体験</span><span>1日ひとつから</span><span>無料</span></div></div></section>
-  <section class="wrap section"><div class="section-head"><div><span class="eyebrow">03 / POSTCARDS FROM THE FIELD</span><h2>牧場の時間を、<br>すこしだけ。</h2><p class="sub muted">草の色、まつげの影、仲間との距離。<br>写真をひらいて、牛たちの世界へ。</p></div><a class="circle-link" href="#gallery"><span>写真をもっと</span><b>↗</b></a></div>${galleryMarkup(6)}</section>
-  <section class="knowledge-teaser wrap"><div><span class="eyebrow">A COW IS MORE THAN CUTE.</span><h2>「かわいい」の、その先を。</h2><p>反すう、寝床、水、仲間。<br>牛の毎日を知ると、一枚の写真の見え方も変わる。</p></div><div class="knowledge-preview">${(catalog.knowledge || []).slice(0, 3).map((item, i) => `<a href="#learn/${e(item.id)}"><span>0${i + 1}</span><strong>${e(item.short)}</strong><b>↗</b></a>`).join('')}<a class="knowledge-all" href="#learn">牛の暮らしのノートを読む <b>→</b></a></div></section>
-  <section class="shop-editorial"><div class="wrap section"><div class="section-head"><div><span class="eyebrow">04 / FROM FARM TO YOUR TABLE</span><h2>好きな牧場が、<br>食卓にあるしあわせ。</h2><p class="sub muted">いつもの一杯に、知っている牧場の物語を。</p></div><a class="circle-link" href="#shop"><span>牧場のお店</span><b>↗</b></a></div><div class="grid product-grid">${catalog.products.slice(0,3).map(productCard).join('')}</div><p class="photo-context">商品は体験用のサンプルです。注文・決済は発生しません。特定の一頭の生乳を分けて届ける仕組みではありません。</p></div></section>
-  <section class="closing-note"><span class="eyebrow">ONE COW. A LITTLE CLOSER.</span><h2>名前を知ったら、<br>遠かった牧場が、近くなる。</h2><a class="btn" href="#cows">あなたの物語をはじめる <span>↗</span></a><span class="closing-word" aria-hidden="true">see you, cow.</span></section>`;
+ const cover = catalog.cows[0];
+ return `<div class="magazine-home reveal"><div class="issue-masthead"><span>牛と暮らしを、読む。</span><span>創刊準備号 / VOL. 01</span></div><div class="magazine-title"><span>牧場ノート</span><small>THE FIELD JOURNAL</small></div><section class="magazine-cover"><a class="cover-image" href="#issue/0"><img src="${imageUrl(cover.photo)}" alt="こちらを見つめる牛のイメージ写真" fetchpriority="high"><span class="cover-photo-label">PORTRAIT No. 01 — HANA</span></a><div class="cover-editorial"><span class="issue-kicker">今号の特集</span><h1>名前で呼ぶと、<br>少し、近くなる。</h1><p class="cover-deck">耳のかたち。額の模様。<br>立ち止まる、そのしぐさ。<br>一頭を知る時間を、ここから。</p><div class="cover-rule"></div><p class="cover-summary">30頭の創作プロフィールと、牧場の写真。<br>牛の暮らしをたどる、小さな読みもの。</p><a class="open-issue" href="#issue/0"><span>誌面をひらく</span><b>→</b></a><span class="cover-folio">特集 01—30 / 牛たちの肖像</span></div></section><section class="issue-contents"><div><span class="issue-kicker">CONTENTS</span><h2>今号の目次</h2></div><div class="contents-list"><a href="#issue/0"><span>01</span><div><strong>名前を知る。顔を覚える。</strong><small>30頭の肖像を、一頭ずつめくる。</small></div><b>↗</b></a><a href="#naming"><span>02</span><div><strong>牛の名前の、はなし。</strong><small>登録名と愛称、そして乳量の研究。</small></div><b>↗</b></a><a href="#gallery"><span>03</span><div><strong>写真で歩く、牧場。</strong><small>草地から牛舎まで。風景の向こう側へ。</small></div><b>↗</b></a><a href="#learn"><span>04</span><div><strong>もぐもぐの、その理由。</strong><small>反すう、休息、水。毎日の営みを読む。</small></div><b>↗</b></a></div></section><div class="issue-colophon"><span>写真はイメージ。牛の名前・性格・牧場は創作です。</span><a href="#cows">30頭の一覧を見る →</a></div></div>`;
+}
+
+function issuePage(index) {
+ const page = Math.max(0, Math.min(catalog.cows.length - 1, Number(index) || 0));
+ const cow = catalog.cows[page];
+ const selected = state.favorite === cow.id;
+ return `<div class="reader reveal" aria-label="牧場ノート 牛たちの肖像"><div class="reader-top"><a href="#home">← 表紙へ</a><span>牧場ノート / 牛たちの肖像</span><details class="reader-index"><summary>目次 ＋</summary><div>${catalog.cows.map((c,i)=>`<a href="#issue/${i}" ${i===page?'aria-current="page"':''}><small>${String(i+1).padStart(2,'0')}</small> ${e(c.name)}</a>`).join('')}</div></details></div><article class="portrait-spread" data-spread="${page}"><div class="spread-photo"><img src="${imageUrl(cow.photo)}" alt="${e(cow.name)}の創作プロフィールに添えたイメージ写真"><span>PORTRAITS FROM THE FIELD</span></div><div class="spread-copy"><div class="spread-folio"><span>牛たちの肖像</span><b>${String(page+1).padStart(2,'0')}</b></div><span class="nickname-label">愛称 / 創作プロフィール</span><h1>${e(cow.name)}</h1><p class="spread-headline">${e(cow.headline)}</p><p class="spread-description">${e(cow.intro)}</p><dl class="portrait-facts"><div><dt>呼び名のヒント</dt><dd>${e(cow.nameNote || '写真から思い浮かべた、親しみを込めた愛称。')}</dd></div><div><dt>物語の中では</dt><dd>${e(cow.personality)}</dd></div></dl><p class="portrait-disclaimer">愛称と性格は創作です。写真の個体の登録名・実際の性格を示すものではありません。</p><div class="spread-actions"><button data-action="favorite" data-id="${e(cow.id)}" aria-pressed="${selected}">${selected?'♥ 推し牛に選択済み':'♡ この子を推し牛にする'}</button><a href="#cow/${e(cow.id)}">プロフィールを読む ↗</a></div></div></article><nav class="reader-pager" aria-label="誌面のページ送り">${page>0?`<a href="#issue/${page-1}" rel="prev" aria-label="前の一頭へ">← <span>前の一頭</span></a>`:'<a href="#home">← <span>表紙</span></a>'}<span>${String(page+1).padStart(2,'0')} <i>/</i> ${catalog.cows.length}</span>${page<catalog.cows.length-1?`<a href="#issue/${page+1}" rel="next" aria-label="次の一頭へ"><span>次の一頭</span> →</a>`:'<a href="#naming"><span>次の特集</span> →</a>'}</nav><p class="reader-help">左右にスワイプ、または矢印キーでもページを送れます。</p></div>`;
+}
+
+function namingPage() {
+ return `<div class="naming-story wrap section reveal"><div class="story-heading"><span class="issue-kicker">ESSAY / 牛の名前の、はなし。</span><h1>番号の先に、<br>名前がある。</h1><p>正式な登録名と、毎日呼びかける愛称。<br>同じ一頭にも、名前の役割はいろいろ。</p></div><div class="naming-columns"><aside><img src="${imageUrl(catalog.cows[3].photo)}" alt="牛のイメージ写真" loading="lazy"><small>写真はイメージです。</small></aside><div><article><h2>登録名と、呼び名。</h2><p>血統登録のための名前と、牧場で日々呼ぶ愛称は、同じとは限りません。日本ホルスタイン登録協会の手引きでは、父・母から各1単語と独自の1単語による「3名法」を基本に、カナ32文字以内、1単語15文字以内としています。和牛では雄を漢字、雌をひらがなで命名する説明が農水省の資料にあります。実際の登録では、各団体の最新の規程を確認します。</p><p><a class="text-link source-link" href="https://hcaj.or.jp/bulletin/bulletin-1666185069/" target="_blank" rel="noopener noreferrer">日本ホルスタイン登録協会：名号について ↗</a><br><a class="text-link source-link" href="https://www.maff.go.jp/j/pr/aff/1608/spe1_04.html" target="_blank" rel="noopener noreferrer">農林水産省：和牛の登記 ↗</a></p><p>このサイトの30頭につけたのは、親しみを込めた創作の愛称です。実在の個体の血統登録名や耳標番号とは結び付けていません。</p></article><article><h2>名前と乳量。<br>研究が伝えること。</h2><p>英国の酪農場を調べた2009年の研究では、牛を名前で呼ぶ農場で、年間乳量が一頭あたり約258リットル多いという関連が報告されました。</p><p>これは農場への調査で見られた関連です。名前をつけることだけの効果や、ストレス低下という仕組みを、この数字から確定することはできません。一頭ずつに目を向ける日々の関わりを考える、ひとつの手がかりです。</p><a class="text-link source-link" href="https://doi.org/10.2752/175303708X390473" target="_blank" rel="noopener noreferrer">出典：Bertenshaw & Rowlinson（2009） ↗</a></article><a class="open-issue" href="#issue/0">名前を知る、一頭に会う <b>→</b></a></div></div></div>`;
 }
 
 function galleryPage() {
@@ -178,7 +178,7 @@ function learnPage(id) {
 function cowsPage() {
   const cows = filter === 'all' ? catalog.cows : catalog.cows.filter(cow => cow.tags.includes(filter));
   const options = ['all', '好奇心いっぱい', 'のんびり屋さん', '観察好き'];
-  return `<div class="wrap section reveal"><div class="page-intro"><span class="eyebrow">MEET YOUR COW.</span><h1>好きになる理由は、<br>一頭ずつ。</h1><p class="sub muted">表情からはじまる、体験用の小さな物語。気になる子に会いにいこう。</p></div><div class="filter-row" aria-label="性格で絞り込む">${options.map(value => `<button class="filter ${filter === value ? 'active' : ''}" data-action="cow-filter" data-id="${e(value)}" aria-pressed="${filter === value}">${value === 'all' ? 'みんなに会う' : e(value)}</button>`).join('')}</div><div class="grid cow-grid">${cows.map(cowCard).join('')}</div></div>`;
+  return `<div class="wrap section reveal"><div class="page-intro"><span class="eyebrow">MEET YOUR COW.</span><h1>好きになる理由は、<br>一頭ずつ。</h1><p class="sub muted">30頭の創作プロフィール。愛称と写真から、気になる一頭を。</p></div><div class="filter-row" aria-label="性格で絞り込む">${options.map(value => `<button class="filter ${filter === value ? 'active' : ''}" data-action="cow-filter" data-id="${e(value)}" aria-pressed="${filter === value}">${value === 'all' ? 'みんなに会う' : e(value)}</button>`).join('')}</div><div class="grid cow-grid">${cows.map(cowCard).join('')}</div></div>`;
 }
 
 function cowPage(cow) {
@@ -241,6 +241,8 @@ function render() {
   let html;
   switch (route) {
     case 'home': html = homePage(); break;
+    case 'issue': html = issuePage(id); break;
+    case 'naming': html = namingPage(); break;
     case 'cows': html = cowsPage(); break;
     case 'cow': html = cowById(id) ? cowPage(cowById(id)) : notFoundPage(); break;
     case 'experience': html = (!id || cowById(id)) ? experiencePage(cowById(id) || currentCow()) : notFoundPage(); break;
@@ -480,3 +482,27 @@ async function init() {
 }
 
 init();
+
+function turnMagazine(direction) {
+ if (!location.hash.startsWith('#issue/')) return;
+ const page = Number(location.hash.split('/')[1]) || 0;
+ const next = page + direction;
+ if(next >= 0 && next < catalog.cows.length) go('issue/' + next);
+}
+document.addEventListener('keydown', event => {
+ if (modal.open || /INPUT|TEXTAREA|SELECT/.test(event.target?.tagName || '') || event.target?.isContentEditable) return;
+ if (event.key === 'ArrowRight') { turnMagazine(1); }
+ if (event.key === 'ArrowLeft') { turnMagazine(-1); }
+});
+let swipeStart;
+document.addEventListener('touchstart', event => {
+ if (!event.target.closest('.spread-photo') || event.touches.length !== 1) { swipeStart = null; return; }
+ swipeStart = { x:event.touches[0].clientX, y:event.touches[0].clientY };
+}, { passive:true });
+document.addEventListener('touchend', event => {
+ if(!swipeStart || !event.changedTouches.length) return;
+ const dx = event.changedTouches[0].clientX - swipeStart.x;
+ const dy = event.changedTouches[0].clientY - swipeStart.y;
+ swipeStart = null;
+ if(Math.abs(dx) > 65 && Math.abs(dx) > Math.abs(dy)*1.5) turnMagazine(dx < 0 ? 1 : -1);
+}, { passive:true });
