@@ -1,0 +1,17 @@
+{
+  "name": "decidetobecow",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "check": "node scripts/check.mjs",
+    "predeploy": "npm run check",
+    "deploy": "npx wrangler deploy",
+    "preview:worker": "npx wrangler dev --ip 0.0.0.0 --port 3000",
+    "dev": "node scripts/preview.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "^4.20.0"
+  }
+}

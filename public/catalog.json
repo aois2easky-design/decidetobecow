@@ -1,0 +1,248 @@
+{
+  "mode": "demo",
+  "shopName": "今世から牛になることにした。",
+  "contactUrl": "",
+  "farms": [
+    {
+      "id": "meadow",
+      "name": "こもれび牧場",
+      "area": "北海道・道東エリア",
+      "tagline": "一頭ずつの、心地よい毎日を。",
+      "description": "草の香り、牛舎の風、その日の一頭の様子。日々の小さな観察とケアを大切にする牧場を想定した、体験用のストーリーです。",
+      "care": [
+        {
+          "title": "足もとを見守る",
+          "text": "歩き方や休み方を観察し、気になる変化があれば担当者に共有する取り組みの例。"
+        },
+        {
+          "title": "暑さへの備え",
+          "text": "送風設備の点検と、牛が水を飲める環境を確認する取り組みの例。"
+        }
+      ],
+      "improvement": {
+        "status": "企画例・実施前",
+        "title": "牛舎の送風環境を見直す",
+        "description": "商品購入と連動した改善は、販売者と対象・金額・報告方法を合意してから開始します。現在、購入に伴う改善費の配分は設定されていません。",
+        "allocationPerOrder": 0,
+        "verified": false
+      }
+    },
+    {
+      "id": "hill",
+      "name": "丘のうえ牧場",
+      "area": "北海道・道央エリア",
+      "tagline": "いつもの一杯に、顔の見える物語。",
+      "description": "乳製品のおいしさと、その背景にある牛たちの暮らしを届ける牧場を想定した体験用データです。実在する事業者の情報ではありません。",
+      "care": [
+        {
+          "title": "休める環境を整える",
+          "text": "寝床の清潔さと、落ち着いて休める場所を確認する取り組みの例。"
+        },
+        {
+          "title": "一頭の変化に気づく",
+          "text": "食べる様子と普段の行動を観察し、日々の管理に役立てる取り組みの例。"
+        }
+      ],
+      "improvement": {
+        "status": "企画例・実施前",
+        "title": "寝床の環境を見直す",
+        "description": "実施内容と資金の使い道は、協力先の決定後に確認できる情報として掲載します。",
+        "allocationPerOrder": 0,
+        "verified": false
+      }
+    }
+  ],
+  "cows": [
+    {
+      "id": "hana",
+      "name": "ハナ",
+      "farmId": "meadow",
+      "photo": "/assets/cow-0.jpg",
+      "color": "#e8eddf",
+      "breed": "ホルスタイン",
+      "headline": "近づくと、つい見つめちゃう。",
+      "personality": "好奇心いっぱい",
+      "intro": "カメラに気づくと、こちらをじっと見つめるハナ。お昼のあとは、いつもの場所でのんびりするのがお気に入り。",
+      "charm": "ちょっと近すぎる、カメラ目線。",
+      "tags": [
+        "好奇心いっぱい",
+        "食べるの大好き",
+        "マイペース"
+      ],
+      "missions": [
+        "eat",
+        "ruminate",
+        "rest"
+      ],
+      "voice": "今日は、ひと口をゆっくり味わってみない？",
+      "moments": [
+        {
+          "id": "hana-a",
+          "label": "朝のひとこま",
+          "title": "カメラより、草が気になる。",
+          "body": "撮影中にふっと目線が外れたハナ。視線の先には、おいしそうな草。そんな小さな一瞬を届ける近況のサンプルです。",
+          "photo": "/assets/cow-0.jpg"
+        },
+        {
+          "id": "hana-b",
+          "label": "お昼のひとこま",
+          "title": "食べたあとの、のんびり時間。",
+          "body": "ハナの近況を見たあとは、自分も少しだけひと息。次の更新を待つ体験をイメージしたサンプルです。",
+          "photo": "/assets/cow-0.jpg"
+        }
+      ]
+    },
+    {
+      "id": "komugi",
+      "name": "こむぎ",
+      "farmId": "meadow",
+      "photo": "/assets/cow-1.jpg",
+      "color": "#eee0cb",
+      "breed": "乳牛（体験用プロフィール）",
+      "headline": "急がなくても、ちゃんと毎日。",
+      "personality": "のんびり屋さん",
+      "intro": "草の上で立ち止まって、風を感じるこむぎ。自分のペースで過ごす姿が、なんだか気になる一頭です。",
+      "charm": "のんびりした表情と、白い額。",
+      "tags": [
+        "のんびり屋さん",
+        "日なた好き",
+        "おっとり"
+      ],
+      "missions": [
+        "rest",
+        "sunlight",
+        "ruminate"
+      ],
+      "voice": "ちょっと立ち止まって、周りを見てみよう。",
+      "moments": [
+        {
+          "id": "komugi-a",
+          "label": "牧場のひとこま",
+          "title": "風のにおい、分かるかな。",
+          "body": "同じ場所にいても、毎日少しずつ違う景色。こむぎの暮らしを想像するための近況サンプルです。",
+          "photo": "/assets/cow-1.jpg"
+        },
+        {
+          "id": "komugi-b",
+          "label": "午後のひとこま",
+          "title": "今日はここで、ひとやすみ。",
+          "body": "同じ一頭を見守ると、少しの違いも気になってくる。継続して近況を届ける機能の表示例です。",
+          "photo": "/assets/cow-1.jpg"
+        }
+      ]
+    },
+    {
+      "id": "mugi",
+      "name": "むぎ",
+      "farmId": "hill",
+      "photo": "/assets/cow-2.jpg",
+      "color": "#e6ded1",
+      "breed": "乳牛（体験用プロフィール）",
+      "headline": "その目が合うと、また会いたい。",
+      "personality": "気になるものに一直線",
+      "intro": "遠くにいても、目が合った気がするむぎ。仲間と過ごす時間も、周りを観察する時間も大切にしています。",
+      "charm": "まっすぐな瞳と、くっきりした模様。",
+      "tags": [
+        "観察好き",
+        "仲間思い",
+        "ちょっぴり慎重"
+      ],
+      "missions": [
+        "walk",
+        "rest",
+        "eat"
+      ],
+      "voice": "いつもの道にも、気になるものがあるかも。",
+      "moments": [
+        {
+          "id": "mugi-a",
+          "label": "朝のひとこま",
+          "title": "いつもの場所から、おはよう。",
+          "body": "日常の一枚から、一頭を身近に感じる。むぎのプロフィールと近況は体験用に作成したものです。",
+          "photo": "/assets/cow-2.jpg"
+        },
+        {
+          "id": "mugi-b",
+          "label": "牧場のひとこま",
+          "title": "今日も、仲間のそばで。",
+          "body": "一頭への関心から、その牛が暮らす環境や仲間のことも知っていくための近況サンプルです。",
+          "photo": "/assets/cow-2.jpg"
+        }
+      ]
+    }
+  ],
+  "products": [
+    {
+      "id": "milk-set",
+      "farmId": "meadow",
+      "name": "牧場のミルク便",
+      "subtitle": "牛乳 900ml × 2本",
+      "kind": "milk",
+      "price": 1600,
+      "shipping": 1000,
+      "description": "いつもの朝に、その牧場の一杯を。飲み比べや家族の食卓を想定した商品例です。",
+      "ingredients": "生乳",
+      "allergens": "乳成分",
+      "storage": "要冷蔵（10℃以下）",
+      "expiry": "実販売時は販売元の商品表示をご確認ください。",
+      "checkoutUrl": "",
+      "seller": "販売者未設定",
+      "stock": null,
+      "sample": true
+    },
+    {
+      "id": "cheese-set",
+      "farmId": "meadow",
+      "name": "ひとやすみチーズセット",
+      "subtitle": "ナチュラルチーズ 2種",
+      "kind": "cheese",
+      "price": 2400,
+      "shipping": 1000,
+      "description": "ちょっと丁寧に味わう、おやつの時間。牛との体験のあとに出会うチーズのセット例です。",
+      "ingredients": "実商品確定後に表示",
+      "allergens": "乳成分（その他は実商品確定後に表示）",
+      "storage": "要冷蔵（10℃以下）",
+      "expiry": "実販売時は販売元の商品表示をご確認ください。",
+      "checkoutUrl": "",
+      "seller": "販売者未設定",
+      "stock": null,
+      "sample": true
+    },
+    {
+      "id": "yogurt-set",
+      "farmId": "hill",
+      "name": "朝のヨーグルト便",
+      "subtitle": "プレーンヨーグルト 4個",
+      "kind": "yogurt",
+      "price": 1800,
+      "shipping": 1000,
+      "description": "朝の食卓から、牧場を思い出す。少しずつ楽しむヨーグルトのセットを想定した商品例です。",
+      "ingredients": "実商品確定後に表示",
+      "allergens": "乳成分",
+      "storage": "要冷蔵（10℃以下）",
+      "expiry": "実販売時は販売元の商品表示をご確認ください。",
+      "checkoutUrl": "",
+      "seller": "販売者未設定",
+      "stock": null,
+      "sample": true
+    }
+  ],
+  "credits": [
+    {
+      "name": "Jan Huber / Unsplash",
+      "url": "https://unsplash.com/photos/black-and-white-cow-on-green-grass-field-during-daytime-sOSZl7IuX-I"
+    },
+    {
+      "name": "Josh Withers / Unsplash",
+      "url": "https://unsplash.com/photos/a-cow-standing-in-a-field-IpSEEdRZhyA"
+    },
+    {
+      "name": "Jametlene Reskp / Unsplash",
+      "url": "https://unsplash.com/fr/photos/une-vache-debout-dans-un-champ-vgpidbwfi4M"
+    }
+  ],
+  "experiment": {
+    "enabled": false,
+    "defaultVariant": "B"
+  }
+}
