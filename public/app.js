@@ -6,6 +6,7 @@ const NAV = [
   ['cows', '♡', '推し牛を探す'],
   ['experience', '◷', '牛になる'],
   ['shop', '▱', '牧場のお店'],
+  ['learn', '◉', '牛の暮らし'],
   ['my', '☷', 'マイ牧場']
 ];
 const main = document.querySelector('main');
@@ -143,22 +144,41 @@ function missionFeature(cow) {
   return `<div class="mission-feature"><div class="mission-visual"><img src="${imageUrl(cow.photo)}" alt="${e(cow.name)}のイメージ写真" loading="lazy"><div class="floating">「${e(cow.voice)}」<small style="display:block;margin-top:8px">${e(cow.name)}と過ごす、牛になる時間</small></div></div><div class="mission-copy"><span class="eyebrow">BECOME A COW, FEEL A LITTLE CLOSER.</span><h2>今日は、ちょっとだけ<br>${e(cow.name)}になってみる。</h2><p>ゆっくり食べる。ひと息つく。周りを見渡す。<br>牛の暮らしをヒントにした小さな体験から、<br>その一頭が、少し身近になるかもしれません。</p><a class="btn light" href="#experience/${e(cow.id)}">${e(cow.name)}と牛になる <span>→</span></a><div class="mission-chip">1日ひとつから / あなたのペースで / 無料</div></div></div>`;
 }
 
+function galleryMarkup(limit = 6) {
+  return `<div class="pasture-gallery">${(catalog.gallery || []).slice(0, limit).map((photo, index) => `<button class="pasture-shot shot-${index}" data-action="photo" data-id="${e(photo.id)}" aria-label="${e(photo.title)}の写真を拡大"><img src="${imageUrl(photo.photo)}" alt="${e(photo.alt)}" loading="lazy" width="720" height="900"><span><small>FIELD NOTES / ${String(index + 1).padStart(2, '0')}</small>${e(photo.title)} <b>↗</b></span></button>`).join('')}</div>`;
+}
+
 function homePage() {
   const cow = currentCow();
   const farm = farmById(cow.farmId);
-  const products = catalog.products.filter(product => product.farmId === cow.farmId);
-  return `<section class="hero reveal"><div class="hero-copy"><span class="eyebrow">A LITTLE CLOSER TO YOUR COW.</span><h1>一頭を好きになる。<br><em>買いものに、</em><br><em>理由ができる。</em></h1><p>なんだか気になる、その表情。<br>一緒に「牛になる」時間を過ごしたら、<br>この子が暮らす牧場のことも、知りたくなった。</p><div class="btn-row"><a class="btn" href="#${favoriteCow() ? 'cow/' + e(cow.id) : 'cows'}">${favoriteCow() ? e(cow.name) + 'に会いにいく' : 'あなたの推し牛に出会う'} <span>→</span></a><a class="text-link" href="#about" style="align-self:center">どんな体験？</a></div><span class="hero-scroll">MEET / BECOME / CHOOSE</span></div><div class="hero-photo"><img src="${imageUrl(cow.photo)}" alt="こちらを見つめる牛のイメージ写真" fetchpriority="high"><span class="photo-note">${catalog.mode === 'demo' ? '体験用プロフィール・イメージ写真' : '牧場からの一枚'}</span><a class="photo-tag" href="#cow/${e(cow.id)}"><span class="tag">${favoriteCow() ? 'あなたの推し牛' : '今日、目が合ったのは。'}</span><div><strong>${e(cow.name)}</strong><small>${e(farm.name)}</small></div><p style="font-size:11px;margin-top:5px">${e(cow.headline)} <span class="arrow">↗</span></p></a></div></section>
-  <div class="journey-strip"><div class="steps"><div class="step"><b>01</b><div><strong>一頭と出会う</strong><p>性格も、好きなことも、一頭ずつ。</p></div></div><div class="step"><b>02</b><div><strong>ちょっと、牛になる</strong><p>同じリズムで、少し近づく。</p></div></div><div class="step"><b>03</b><div><strong>その牧場を選ぶ</strong><p>好きな一頭から、いつもの食卓へ。</p></div></div></div></div>
-  <section class="wrap section"><div class="section-head"><div><span class="eyebrow">FIND YOUR ONE.</span><h2>どの子が、気になる？</h2><p class="sub muted">「かわいい」も「なんだか好き」も、出会いの理由。</p></div><a class="text-link" href="#cows">みんなに会う ↗</a></div><div class="grid cow-grid">${catalog.cows.map(cowCard).join('')}</div></section>
-  <section class="wrap" style="padding-bottom:65px">${missionFeature(cow)}</section>
-  <section class="soft-section"><div class="wrap section"><div class="section-head"><div><span class="eyebrow">FROM THEIR FARM TO YOUR TABLE.</span><h2>${favoriteCow() ? e(cow.name) + 'の暮らす牧場から。' : '好きな一頭の、その先へ。'}</h2><p class="sub muted">この子が暮らす牧場の商品を、食卓へ。</p></div><a class="text-link" href="#shop">お店を見る ↗</a></div><div class="grid product-grid">${products.concat(catalog.products.filter(product => product.farmId !== cow.farmId)).slice(0, 3).map(productCard).join('')}</div><p class="inline-note">複数の牛の生乳が使われる商品があります。特定の一頭の牛乳を届ける仕組みではありません。</p></div></section>
-  <section class="wrap section"><div class="belief"><span class="eyebrow">A CHOICE THAT STARTS WITH ONE COW.</span><h2>名前を知ったら、<br>遠かった牧場が、近くなる。</h2><p>一頭への愛着が、その牧場を選ぶきっかけになる。<br>そんな買いものを、少しずつ増やしていきたい。<br>購入が牧場の収益につながり、牛の暮らしに還元される仕組みを、販売者とともに育てていきます。</p><a class="text-link" href="#about">私たちが目指すこと ↗</a></div></section>`;
+  return `<section class="editorial-hero reveal">
+    <div class="hero-editorial-copy"><span class="edition-label"><i></i> THE SLOW LIFE, WITH COWS.</span><h1>今日は、<br><span>牛のペースで。</span></h1><p class="hero-intro">がんばる毎日に、<br>牧場の余白を、ひとさじ。</p><p class="hero-description">一頭と出会って、ゆっくり知って、好きになる。<br>牛とあなたの、ちいさな物語をはじめよう。</p><a class="btn hero-cta" href="#${favoriteCow() ? 'cow/' + e(cow.id) : 'cows'}">${favoriteCow() ? e(cow.name) + 'に会いにいく' : 'わたしの推し牛を見つける'} <span>↗</span></a><div class="hero-footnote"><span>MEET. SLOW DOWN. FEEL CLOSER.</span><span>SCROLL TO THE FARM ↓</span></div></div>
+    <div class="hero-editorial-image"><img class="cover-cow" src="${imageUrl(cow.photo)}" alt="牧場でこちらを見つめる牛のイメージ写真" fetchpriority="high" width="1000" height="1200"><div class="hero-image-shade"></div><span class="image-index">OUR LITTLE FARM / 01</span><div class="round-stamp" aria-hidden="true">HELLO,<br><em>COW!</em><span>ゆっくり、いこう。</span></div><a class="hero-cow-caption" href="#cow/${e(cow.id)}"><span><small>今日、目が合ったのは。</small><strong>${e(cow.name)}<em>${e(farm.name)} / 体験用プロフィール</em></strong></span><b>↗</b></a><span class="image-disclaimer">PHOTOGRAPH FOR ILLUSTRATION</span></div>
+  </section>
+  <div class="field-ribbon"><span>A GOOD DAY STARTS SLOW.</span><i>✳</i><span>食べて、休んで、ときどき、もぐもぐ。</span><i>✳</i><span>MEET YOUR FAVORITE COW.</span><i>✳</i></div>
+  <section class="wrap section meet-section"><div class="section-head"><div><span class="eyebrow">01 / MEET YOUR COW</span><h2>好きになるのは、<br class="mobile-break">きっと一瞬。</h2><p class="sub muted">まっすぐな瞳も、のんびりした横顔も。<br>あなたは、どの子が気になる？</p></div><a class="circle-link" href="#cows"><span>みんなに会う</span><b>↗</b></a></div><div class="grid cow-grid home-cows">${catalog.cows.slice(0, 4).map(cowCard).join('')}</div><p class="photo-context">名前や性格は体験用の物語です。写真の牛と実在のプロフィールを結び付けるものではありません。</p></section>
+  <section class="slow-feature"><div class="slow-feature-photo"><img src="${imageUrl(catalog.featurePhoto || cow.photo)}" alt="草地で過ごす牛たちのイメージ写真" loading="lazy" width="1000" height="900"><span class="photo-caption">A MOMENT IN THE MEADOW / 写真はイメージ</span></div><div class="slow-feature-copy"><span class="eyebrow">02 / BECOME A LITTLE CLOSER</span><span class="handwritten">take it mooo easy.</span><h2>何もしない、を。<br>今日は、してみる。</h2><p>ゆっくり食べる。ひと息つく。<br>いつもの景色を、もう一度見る。<br>牛の暮らしをヒントに、あなたにも小さな休息を。</p><a class="btn light" href="#experience/${e(cow.id)}">今日の「牛になる」を選ぶ <span>→</span></a><div class="experience-meta"><span>20の小さな体験</span><span>1日ひとつから</span><span>無料</span></div></div></section>
+  <section class="wrap section"><div class="section-head"><div><span class="eyebrow">03 / POSTCARDS FROM THE FIELD</span><h2>牧場の時間を、<br>すこしだけ。</h2><p class="sub muted">草の色、まつげの影、仲間との距離。<br>写真をひらいて、牛たちの世界へ。</p></div><a class="circle-link" href="#gallery"><span>写真をもっと</span><b>↗</b></a></div>${galleryMarkup(6)}</section>
+  <section class="knowledge-teaser wrap"><div><span class="eyebrow">A COW IS MORE THAN CUTE.</span><h2>「かわいい」の、その先を。</h2><p>反すう、寝床、水、仲間。<br>牛の毎日を知ると、一枚の写真の見え方も変わる。</p></div><div class="knowledge-preview">${(catalog.knowledge || []).slice(0, 3).map((item, i) => `<a href="#learn/${e(item.id)}"><span>0${i + 1}</span><strong>${e(item.short)}</strong><b>↗</b></a>`).join('')}<a class="knowledge-all" href="#learn">牛の暮らしのノートを読む <b>→</b></a></div></section>
+  <section class="shop-editorial"><div class="wrap section"><div class="section-head"><div><span class="eyebrow">04 / FROM FARM TO YOUR TABLE</span><h2>好きな牧場が、<br>食卓にあるしあわせ。</h2><p class="sub muted">いつもの一杯に、知っている牧場の物語を。</p></div><a class="circle-link" href="#shop"><span>牧場のお店</span><b>↗</b></a></div><div class="grid product-grid">${catalog.products.slice(0,3).map(productCard).join('')}</div><p class="photo-context">商品は体験用のサンプルです。注文・決済は発生しません。特定の一頭の生乳を分けて届ける仕組みではありません。</p></div></section>
+  <section class="closing-note"><span class="eyebrow">ONE COW. A LITTLE CLOSER.</span><h2>名前を知ったら、<br>遠かった牧場が、近くなる。</h2><a class="btn" href="#cows">あなたの物語をはじめる <span>↗</span></a><span class="closing-word" aria-hidden="true">see you, cow.</span></section>`;
+}
+
+function galleryPage() {
+ return `<div class="wrap section reveal"><div class="page-intro"><span class="eyebrow">POSTCARDS FROM THE FIELD / PHOTO JOURNAL</span><h1>眺めるだけでも、<br>ちょっと、牧場気分。</h1><p class="sub muted">${(catalog.gallery || []).length}枚の写真から、気になる瞬間を。写真を押すと、大きくひらきます。</p></div>${galleryMarkup(50)}<p class="photo-context">写真はイメージです。掲載する体験用の牧場や牛の生活記録ではありません。</p><button class="text-link" data-action="credits">写真の撮影者・出典を見る ↗</button></div>`;
+}
+
+function learnPage(id) {
+ const items = catalog.knowledge || [];
+ const selected = items.find(item => item.id === id);
+ const shown = selected ? [selected] : items;
+ return `<div class="wrap section reveal"><div class="page-intro"><span class="eyebrow">THE COW NOTEBOOK / 牛の暮らしのノート</span><h1>${selected ? e(selected.short) : '知るほど、<br>もっと気になる。'}</h1><p class="sub muted">反すうから、毎日のケアまで。<br>農林水産省などの公開資料をもとに、牛の暮らしを読み解きます。</p></div><div class="learn-grid">${shown.map((item, index) => `<article class="learn-article"><div class="learn-image"><img src="${imageUrl(item.photo)}" alt="${e(item.alt)}" loading="lazy" width="800" height="600"><span>FIELD NOTE / ${String(items.indexOf(item) + 1).padStart(2,'0')}</span></div><div class="learn-copy"><span class="eyebrow">${e(item.category)}</span><h2>${e(item.title)}</h2><p>${e(item.body)}</p><div class="observe-note"><strong>写真の向こうに、想像してみる</strong><p>${e(item.observe)}</p></div><a class="text-link source-link" href="${e(safeUrl(item.source))}" target="_blank" rel="noopener noreferrer">出典：${e(item.sourceName)} ↗</a></div></article>`).join('')}</div><div class="notice">一般的な酪農知識を紹介しています。写真一枚から牛の健康状態や幸福度、品種、性格を判定することはできません。</div><div class="btn-row"><a class="btn" href="#experience">牛の暮らしをヒントに、ひと休み →</a>${selected ? '<a class="btn secondary" href="#learn">すべてのノートを読む</a>' : ''}</div></div>`;
 }
 
 function cowsPage() {
   const cows = filter === 'all' ? catalog.cows : catalog.cows.filter(cow => cow.tags.includes(filter));
   const options = ['all', '好奇心いっぱい', 'のんびり屋さん', '観察好き'];
-  return `<div class="wrap section reveal"><div class="page-intro"><span class="eyebrow">MEET YOUR COW.</span><h1>好きになる理由は、<br>一頭ずつ。</h1><p class="sub muted">表情、性格、小さな日常。気になる子に会いにいこう。</p></div><div class="filter-row" aria-label="性格で絞り込む">${options.map(value => `<button class="filter ${filter === value ? 'active' : ''}" data-action="cow-filter" data-id="${e(value)}" aria-pressed="${filter === value}">${value === 'all' ? 'みんなに会う' : e(value)}</button>`).join('')}</div><div class="grid cow-grid">${cows.map(cowCard).join('')}</div></div>`;
+  return `<div class="wrap section reveal"><div class="page-intro"><span class="eyebrow">MEET YOUR COW.</span><h1>好きになる理由は、<br>一頭ずつ。</h1><p class="sub muted">表情からはじまる、体験用の小さな物語。気になる子に会いにいこう。</p></div><div class="filter-row" aria-label="性格で絞り込む">${options.map(value => `<button class="filter ${filter === value ? 'active' : ''}" data-action="cow-filter" data-id="${e(value)}" aria-pressed="${filter === value}">${value === 'all' ? 'みんなに会う' : e(value)}</button>`).join('')}</div><div class="grid cow-grid">${cows.map(cowCard).join('')}</div></div>`;
 }
 
 function cowPage(cow) {
@@ -229,9 +249,12 @@ function render() {
     case 'farm': html = farmById(id) ? farmPage(farmById(id)) : notFoundPage(); break;
     case 'my': html = myPage(); break;
     case 'about': html = aboutPage(); break;
+    case 'gallery': html = galleryPage(); break;
+    case 'learn': html = learnPage(id); break;
     default: html = notFoundPage();
   }
   main.innerHTML = html;
+  document.body.dataset.page = route;
   document.querySelector('.desktop-nav').innerHTML = navMarkup(false);
   document.querySelector('.mobile-nav').innerHTML = navMarkup(true);
   document.querySelector('#list-count').textContent = state.list.length;
@@ -275,7 +298,7 @@ function missionModal(id, cowId) {
   const cow = cowById(cowId);
   if (!mission || !cow) return;
   const complete = doneToday(id, cowId);
-  openModal(`<div class="modal-cow"><img src="${imageUrl(cow.photo)}" alt=""><span>${e(cow.name)}と、牛になる時間</span></div><span class="eyebrow">${e(mission.category)}</span><h2 id="modal-title">${e(mission.title)}</h2><p>${e(mission.action)}</p><div class="notice"><strong>牛の暮らしを知るヒント</strong><br>${e(mission.fact)}</div>${complete ? '<p class="notice">✓ 今日の体験は記録済みです。同じ牛・同じミッションは１日１回記録します。</p>' : `<div class="timer" id="timer-display">01:00</div><button class="btn secondary full" data-action="timer">１分だけ、一緒に過ごす</button><p class="inline-note">１分の導入タイマーです。ミッションの時間は自分のペースで。ページを閉じるとタイマーは終了します。</p>`}<label for="mission-note">この子を思い浮かべて、どんな気分になった？</label><textarea id="mission-note" maxlength="1000" placeholder="ひとことでも、空欄でも大丈夫。"></textarea><button class="btn full" style="margin-top:8px" data-action="complete" data-id="${e(id)}" data-cow="${e(cow.id)}">${complete ? 'ひとことを日記に残す' : '体験を記録して、日記に残す'}</button>`);
+  openModal(`<div class="modal-cow"><img src="${imageUrl(cow.photo)}" alt=""><span>${e(cow.name)}と、牛になる時間</span></div><span class="eyebrow">${e(mission.category)}</span><h2 id="modal-title">${e(mission.title)}</h2><p>${e(mission.action)}</p><div class="notice"><strong>牛の暮らしを知るヒント</strong><br>${e(mission.fact)}${safeUrl(mission.source) ? `<br><a class="text-link source-link" href="${e(safeUrl(mission.source))}" target="_blank" rel="noopener noreferrer">出典：${e(mission.sourceName)} ↗</a>` : ''}</div>${complete ? '<p class="notice">✓ 今日の体験は記録済みです。同じ牛・同じミッションは１日１回記録します。</p>' : `<div class="timer" id="timer-display">01:00</div><button class="btn secondary full" data-action="timer">１分だけ、一緒に過ごす</button><p class="inline-note">１分の導入タイマーです。ミッションの時間は自分のペースで。ページを閉じるとタイマーは終了します。</p>`}<label for="mission-note">この子を思い浮かべて、どんな気分になった？</label><textarea id="mission-note" maxlength="1000" placeholder="ひとことでも、空欄でも大丈夫。"></textarea><button class="btn full" style="margin-top:8px" data-action="complete" data-id="${e(id)}" data-cow="${e(cow.id)}">${complete ? 'ひとことを日記に残す' : '体験を記録して、日記に残す'}</button>`);
 }
 
 function completeMission(id, cowId) {
@@ -321,6 +344,11 @@ function checkoutModal(id) {
 }
 
 const actions = {
+  photo: button => {
+    const photo = (catalog.gallery || []).find(item => item.id === button.dataset.id);
+    if (!photo) return;
+    openModal(`<figure class="photo-lightbox"><img src="${imageUrl(photo.photo)}" alt="${e(photo.alt)}"><figcaption><span class="eyebrow">POSTCARDS FROM THE FIELD</span><h2 id="modal-title">${e(photo.title)}</h2><p>${e(photo.description || '牛たちの暮らしを想像する、イメージ写真。')}</p><p class="inline-note">イメージ写真・体験用の牧場や個体とは関連しません。</p><a class="text-link" href="${e(safeUrl(photo.source))}" target="_blank" rel="noopener noreferrer">${e(photo.credit)} / 写真の出典 ↗</a><p class="inline-note">${photo.licenseUrl ? `<a class="text-link" href="${e(safeUrl(photo.licenseUrl))}" target="_blank" rel="noopener noreferrer">${e(photo.license)} ↗</a>` : e(photo.license)}<br>サイズ変更・JPEG再圧縮。表示枠に合わせたトリミング。</p></figcaption></figure>`);
+  },
   favorite: button => chooseFavorite(button.dataset.id),
   'cow-filter': button => { filter = button.dataset.id; render(); },
   'product-filter': button => { productFilter = button.dataset.id; render(); },
@@ -396,7 +424,7 @@ const actions = {
   },
   close: closeModal,
   privacy: () => openModal('<span class="eyebrow">YOUR DATA.</span><h2 id="modal-title">保存とプライバシー</h2><p>推し牛・ミッション・日記・リストはこのブラウザのローカルストレージに保存します。日記の内容はサーバーに送信しません。端末間の同期はありません。</p><div class="notice">閲覧・お気に入り・体験完了・ショップ遷移などの行動イベントを、サービス改善と比較検証に使います。サーバー集計はD1接続時に有効です。送る項目はイベント種別、牛や商品のID、比較条件です。氏名・メールアドレス・日記本文は含めません。</div><p>決済や配送情報は、販売元のショップで入力します。外部サイトには各販売元のプライバシーポリシーが適用されます。</p><p class="inline-note">端末の記録はマイ牧場で書き出し・削除できます。運営者が実販売を始める際は、問い合わせ先と正式な方針を公開してください。</p>'),
-  credits: () => openModal(`<span class="eyebrow">PHOTO CREDITS.</span><h2 id="modal-title">写真について</h2><p>体験版の写真はイメージです。架空のプロフィール・牧場・近況と、写真の撮影地や実在の牛との関連はありません。</p><div style="margin-top:20px">${catalog.credits.map(credit => `<p><a class="text-link" href="${e(safeUrl(credit.url))}" target="_blank" rel="noopener noreferrer">${e(credit.name)} ↗</a></p>`).join('')}</div><p class="inline-note">商品画像は本サイト用のイメージイラストです。</p>`),
+  credits: () => openModal(`<span class="eyebrow">PHOTO CREDITS.</span><h2 id="modal-title">写真について</h2><p>体験版の写真はイメージです。架空のプロフィール・牧場・近況と、写真の撮影地や実在の牛との関連はありません。</p><div style="margin-top:20px">${catalog.credits.map(credit => `<div class="credit-entry"><a class="text-link" href="${e(safeUrl(credit.url))}" target="_blank" rel="noopener noreferrer">${e(credit.name)} ↗</a>${credit.photo ? `<small>${e(credit.photo.split('/').pop())}</small>` : ''}${credit.license ? `<small>${credit.licenseUrl ? `<a href="${e(safeUrl(credit.licenseUrl))}" target="_blank" rel="noopener noreferrer">${e(credit.license)} ↗</a>` : e(credit.license)}</small><small>${e(credit.changes)}</small>` : '<small>Unsplash License / サイズ変更</small>'}</div>`).join('')}</div><p class="inline-note">商品画像は本サイト用のイメージイラストです。牛の暮らしのノートには、各記事に公開資料へのリンクを掲載しています。</p>`),
   export: () => {
     const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' });
     const url = URL.createObjectURL(blob);

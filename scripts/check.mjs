@@ -46,3 +46,17 @@ assert.equal((await worker.fetch(eventRequest(event), { DB })).status, 201);
 assert.deepEqual(boundValues, ['shop_outbound', 'milk-set', 'B']);
 assert.equal((await worker.fetch(eventRequest({ ...event, id: 'x'.repeat(2000) }))).status, 413);
 console.log('Passed content integrity, syntax, bundled assets, API validation and optional D1 checks.');
+
+// Guard against the broken multiline font import that stripped the previous UI.
+const css = await readFile(path.join(root, 'public/style.css'), 'utf8');
+assert(!/@import\s+url\(['"][^'"]*[\r\n]/.test(css), 'CSS import URLs must not contain raw newlines');
+const html = await readFile(path.join(root, 'public/index.html'), 'utf8');
+assert(!/href="[^"\n]*\n[^"\n]*"/.test(html), 'HTML resource URLs must not contain raw newlines');
+for (const item of [...catalog.gallery, ...catalog.knowledge]) {
+  await readFile(path.join(root, 'public', item.photo));
+  assert(/^https:\/\//.test(item.source), 'Missing source URL');
+}
+assert.equal(new Set(catalog.gallery.map(item => item.photo)).size, catalog.gallery.length);
+for (const credit of catalog.credits.filter(item => item.license?.startsWith('CC'))) {
+  assert(credit.licenseUrl && credit.changes, 'Creative Commons photos need license and modification credit');
+}

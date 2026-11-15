@@ -4,139 +4,179 @@
     "title": "牛のように食べる",
     "category": "食べる",
     "action": "食事を急がず、10分以上かけて食べてみよう。",
-    "fact": "牛は元々、時間をかけて採食する動物です。人でも、ゆっくり食べることは満腹感の感じやすさに関係すると言われています。"
+    "fact": "牛には、成長や泌乳の段階に合った飼料を、質と量の両面から整えます。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=16",
+    "sourceName": "農林水産省「乳用牛の飼養管理に関する技術的な指針」第2・1"
   },
   {
     "id": "ruminate",
     "title": "反芻する",
     "category": "食べる",
     "action": "食後10分間、スマホを置いてゆっくりしてみよう。",
-    "fact": "乳牛の反芻時間の変化は、健康状態を知る手がかりとして実際の酪農現場でも活用されています（Paudyal, 2021ほか）。"
+    "fact": "反すうは、胃の中の食べ物を口に戻し、かみ直す牛の消化のしくみです。",
+    "source": "https://www.alic.go.jp/koho/kikaku03_001316.html",
+    "sourceName": "農畜産業振興機構「なぜ、牛の胃は4つもあるの？」"
   },
   {
     "id": "rest",
     "title": "休息する",
     "category": "休む",
     "action": "10分間、何もしない時間をつくってみよう。",
-    "fact": "横になって休む時間（横臥時間）は、乳牛の福祉指標としても研究されています（Tucker et al., 2021）。"
+    "fact": "牛には、妨げられず横になって休める空間が必要です。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=22",
+    "sourceName": "農林水産省・同指針 第3・3"
   },
   {
     "id": "walk",
     "title": "牛舎を歩く",
     "category": "歩く",
     "action": "いつもより5分多く歩いてみよう。",
-    "fact": "乳牛の活動量は、反芻時間と組み合わせて健康管理に使われることがあります（Stangaferro et al., 2016）。"
+    "fact": "歩き方や立ち姿の観察は、牛の蹄の変化に気づく手がかりです。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=7",
+    "sourceName": "農林水産省・同指針 第1・6"
   },
   {
     "id": "observe",
     "title": "いつもの自分を観察する",
     "category": "暮らす",
     "action": "昨日と比べて、自分に何か変化はあった？ひとつ書いてみよう。",
-    "fact": "酪農では「普段と違う行動」が、病気の早期発見の手がかりになるとされています。"
+    "fact": "食べ方、反すう、休み方など、牛のいつもとの違いを観察します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=4",
+    "sourceName": "農林水産省・同指針 第1・1"
   },
   {
     "id": "rhythm",
     "title": "牛の一日を振り返る",
     "category": "暮らす",
     "action": "今日の食事・活動・休息を振り返って、今日の自分を3語で表してみよう。",
-    "fact": "一日を振り返って言葉にすることは、行動の変化に気づくきっかけになると言われています。"
+    "fact": "牧場では、牛の健康や飼料、水、温度・湿度などを日々記録します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=4",
+    "sourceName": "農林水産省・同指針 第1・1"
   },
   {
     "id": "sunlight",
     "title": "日向ぼっこする",
     "category": "暮らす",
     "action": "5分でいいので、外に出て日の光を浴びてみよう。",
-    "fact": "日照時間（photoperiod）は乳牛の体内リズムやホルモン分泌に影響することが知られています（Dahl et al., 2000）。"
+    "fact": "暑い日の牛には、直射日光を避けられる場所や十分な水が大切です。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=24",
+    "sourceName": "農林水産省・同指針 第4・1"
   },
   {
     "id": "hydrate",
     "title": "水を飲む",
     "category": "食べる",
     "action": "コップ一杯の水を、今すぐ飲んでみよう。",
-    "fact": "牛の飲水量は気温が上がると増加することが分かっており、気温1℃上昇あたり約1.2kg増えるという報告もあります（West, 2003）。"
+    "fact": "牛に必要な水の量は、気温や乳量、飼料によって変わります。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=16",
+    "sourceName": "農林水産省・同指針 第2・1"
   },
   {
     "id": "groom",
     "title": "身だしなみを整える",
     "category": "暮らす",
     "action": "髪を整えたり顔を洗ったり、自分の身だしなみを少し整えてみよう。",
-    "fact": "牛同士の毛づくろい（アログルーミング）は、仲間関係を築き群れの緊張を和らげる行動として研究されています（Val-Laillet et al., 2009；Monti et al., 2020）。"
+    "fact": "牛が自然な姿勢をとり、毛づくろいできる空間も飼養環境の一部です。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=22",
+    "sourceName": "農林水産省・同指針 第3・3"
   },
   {
     "id": "herd",
     "title": "仲間とつながる",
     "category": "つながる",
     "action": "誰かに「今どうしてる？」と一言、連絡してみよう。",
-    "fact": "牛は群れで支え合うことでストレスに対処しており、仲間との結びつきが社会的サポートになるとする研究があります（Monti et al., 2020）。"
+    "fact": "牛群には社会的な関係があり、群れの編成にも配慮が必要です。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=13",
+    "sourceName": "農林水産省・同指針 第1・15"
   },
   {
     "id": "comfort",
     "title": "居心地を整える",
     "category": "暮らす",
     "action": "部屋の温度や明るさを、今の自分が心地いいように整えてみよう。",
-    "fact": "牛舎内の温度・湿度は乳牛の快適性に直結し、暑熱下では横臥時間が減り飲水行動が増えるなどの変化が報告されています（West, 2003）。"
+    "fact": "牛の快適さには、気温だけでなく湿度や風、日射なども関わります。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=24",
+    "sourceName": "農林水産省・同指針 第4・1"
   },
   {
     "id": "stepcare",
     "title": "足もとをケアする",
     "category": "暮らす",
     "action": "靴を脱いで足を伸ばすか、軽くストレッチしてみよう。",
-    "fact": "歩様（ロコモーションスコア）は、牛の足の健康状態を評価する実際の指標として酪農現場で使われています（Sprecher et al., 1997）。"
+    "fact": "牛の蹄の管理では、日々の観察と、獣医師や削蹄師への相談が重要です。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=7",
+    "sourceName": "農林水産省・同指針 第1・6"
   },
   {
     "id": "brushcare",
     "title": "道具でセルフケアする",
     "category": "休む",
     "action": "マッサージ器や柔らかいブラシなど、自分の体をいたわる道具を一つ使ってみよう。",
-    "fact": "牛は機械ブラシに自ら近づいて体をこすりつけるほどグルーミングへの意欲が強く、ブラシの利用時間は健康・幸福度の指標にもなり得るとされています（カナダ・UBC大学などの研究）。"
+    "fact": "牛に使う道具や設備も、体を傷つけないものを選び、管理します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=5",
+    "sourceName": "農林水産省・同指針 第1・2、第3・2"
   },
   {
     "id": "voice",
     "title": "気持ちを声に出す",
     "category": "つながる",
     "action": "今の気持ちを、誰かに言葉にして伝えてみよう。",
-    "fact": "牛の鳴き声は、空腹や分離不安など内的な状態を伝える「コメンタリー」として研究されています（Watts and Stookey, 2000）。"
+    "fact": "牛の声だけで気持ちは決められません。動作や周囲の状況も観察します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=5",
+    "sourceName": "農林水産省・同指針 第1・1、2を踏まえた観察上の注意"
   },
   {
     "id": "explore",
     "title": "新しいことを試す",
     "category": "歩く",
     "action": "いつもと違う道を通るなど、小さな新しいことを一つ試してみよう。",
-    "fact": "牛が新しいものに示す関心（探索行動）は、行動の幅や心理状態を知る手がかりとして研究の対象になっています（Neaveらの研究など）。"
+    "fact": "牛は周囲の環境の変化に敏感です。突然の動作を避け、丁寧に接します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=5",
+    "sourceName": "農林水産省・同指針 第1・2"
   },
   {
     "id": "sync",
     "title": "誰かとタイミングを合わせる",
     "category": "つながる",
     "action": "休憩の時間を、誰かと合わせてとってみよう。一緒にお茶を飲む、同じ時間に休む、など。",
-    "fact": "牛は群れの仲間と食事や休息のタイミングをそろえる「行動の同調」を示すことが知られています（Miller and Wood-Gush, 1991ほか）。"
+    "fact": "牛群の全頭が同時に横になれる、十分な休息空間を確保します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=22",
+    "sourceName": "農林水産省・同指針 第3・3"
   },
   {
     "id": "morning",
     "title": "朝のリズムを守る",
     "category": "暮らす",
     "action": "今日の朝、いつもの自分らしい順番で過ごせたか、振り返ってみよう。",
-    "fact": "光や時間帯への反応など、牛の体内時計（概日リズム）に関する研究が進んでいます（Dahl et al., 2000）。"
+    "fact": "牧場では、牛への給餌時刻をできるだけ毎日そろえることが勧められます。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=17",
+    "sourceName": "農林水産省・同指針 第2・3"
   },
   {
     "id": "distance",
     "title": "心地よい距離感を保つ",
     "category": "休む",
     "action": "今日はちょっとだけ、人との距離感を自分のペースに合わせてみよう。",
-    "fact": "牛には安心できる「フライトゾーン（警戒距離）」があり、無理に距離を詰めるとストレス反応を示すことが、家畜と人の関係性に関する研究で報告されています（Waiblingerらの研究など）。"
+    "fact": "牛を移動させるときは、最も遅い牛の速さに合わせ、穏やかに誘導します。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=5",
+    "sourceName": "農林水産省・同指針 第1・2"
   },
   {
     "id": "spot",
     "title": "自分の落ち着ける場所を持つ",
     "category": "休む",
     "action": "家の中に、自分がホッとできる\"いつもの場所\"を1つ決めてみよう。",
-    "fact": "牛は特定の寝床（ストール）を繰り返し選ぶ「場所へのこだわり」を示すことが観察されています（O'Connell, Giller and Meaney, 1989ほか）。"
+    "fact": "牛の寝床には、清潔で乾いた、横になりやすい環境を整えます。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=22",
+    "sourceName": "農林水産省・同指針 第3・2"
   },
   {
     "id": "turn",
     "title": "順番を待つ・譲り合う",
     "category": "つながる",
     "action": "今日は誰かに、順番や場所を一つ譲ってみよう。",
-    "fact": "牛は餌場へのアクセスをめぐって、群れの中で順位や競合、譲り合いに似た行動を示すことが採食行動の研究で報告されています（DeVries and von Keyserlingkらの研究）。"
+    "fact": "餌や水をめぐる過度な競合を防ぐため、設備と空間を整えます。",
+    "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf#page=17",
+    "sourceName": "農林水産省・同指針 第2・3"
   }
 ]

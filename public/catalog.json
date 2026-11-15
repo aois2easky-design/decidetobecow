@@ -59,7 +59,7 @@
       "farmId": "meadow",
       "photo": "/assets/cow-0.jpg",
       "color": "#e8eddf",
-      "breed": "ホルスタイン",
+      "breed": "体験用プロフィール・個体の品種は未確認",
       "headline": "近づくと、つい見つめちゃう。",
       "personality": "好奇心いっぱい",
       "intro": "カメラに気づくと、こちらをじっと見つめるハナ。お昼のあとは、いつもの場所でのんびりするのがお気に入り。",
@@ -98,7 +98,7 @@
       "farmId": "meadow",
       "photo": "/assets/cow-1.jpg",
       "color": "#eee0cb",
-      "breed": "乳牛（体験用プロフィール）",
+      "breed": "体験用プロフィール・個体の品種は未確認",
       "headline": "急がなくても、ちゃんと毎日。",
       "personality": "のんびり屋さん",
       "intro": "草の上で立ち止まって、風を感じるこむぎ。自分のペースで過ごす姿が、なんだか気になる一頭です。",
@@ -137,7 +137,7 @@
       "farmId": "hill",
       "photo": "/assets/cow-2.jpg",
       "color": "#e6ded1",
-      "breed": "乳牛（体験用プロフィール）",
+      "breed": "体験用プロフィール・個体の品種は未確認",
       "headline": "その目が合うと、また会いたい。",
       "personality": "気になるものに一直線",
       "intro": "遠くにいても、目が合った気がするむぎ。仲間と過ごす時間も、周りを観察する時間も大切にしています。",
@@ -167,6 +167,201 @@
           "title": "今日も、仲間のそばで。",
           "body": "一頭への関心から、その牛が暮らす環境や仲間のことも知っていくための近況サンプルです。",
           "photo": "/assets/cow-2.jpg"
+        }
+      ]
+    },
+    {
+      "id": "kurumi",
+      "name": "くるみ",
+      "farmId": "hill",
+      "photo": "/assets/jersey-portrait.jpg",
+      "color": "#e4e8d9",
+      "breed": "体験用プロフィール・個体の品種は未確認",
+      "headline": "目が合うと、時間がゆるむ。",
+      "personality": "のんびり屋さん",
+      "intro": "くるみは、写真をきっかけに牛の暮らしを想像するための、体験用プロフィールです。気になる表情から、食べることや休むこと、牧場の毎日を少しずつ知ってみませんか。",
+      "charm": "やわらかな毛色と、まっすぐな瞳。",
+      "tags": [
+        "のんびり屋さん",
+        "マイペース",
+        "仲間思い"
+      ],
+      "missions": [
+        "rest",
+        "eat",
+        "walk"
+      ],
+      "voice": "ひと息ついて、今日は自分のペースで。",
+      "moments": [
+        {
+          "id": "kurumi-a",
+          "label": "写真から想像する、牧場のひとこま",
+          "title": "この表情が、気になって。",
+          "body": "写真をながめて、目や耳、模様を見つけてみる。一頭を身近に感じるための近況サンプルです。写真の実在個体の行動記録ではありません。",
+          "photo": "/assets/jersey-portrait.jpg"
+        },
+        {
+          "id": "kurumi-b",
+          "label": "牛の暮らしを知るヒント",
+          "title": "食べる、休む。その繰り返しを大切に。",
+          "body": "牛にとって、飼料や水に届くこと、落ち着いて横になれる場所があることは日々のケアの基本です。この近況は、暮らしを想像する体験用の文章です。",
+          "photo": "/assets/jersey-portrait.jpg"
+        }
+      ]
+    },
+    {
+      "id": "shiro",
+      "name": "しろ",
+      "farmId": "hill",
+      "photo": "/assets/white-holstein.jpg",
+      "color": "#e4e8d9",
+      "breed": "体験用プロフィール・個体の品種は未確認",
+      "headline": "真っ白な顔が、ひょっこり。",
+      "personality": "観察好き",
+      "intro": "しろは、写真をきっかけに牛の暮らしを想像するための、体験用プロフィールです。気になる表情から、食べることや休むこと、牧場の毎日を少しずつ知ってみませんか。",
+      "charm": "白い顔に、小さな好奇心。",
+      "tags": [
+        "観察好き",
+        "マイペース",
+        "仲間思い"
+      ],
+      "missions": [
+        "rest",
+        "eat",
+        "walk"
+      ],
+      "voice": "ひと息ついて、今日は自分のペースで。",
+      "moments": [
+        {
+          "id": "shiro-a",
+          "label": "写真から想像する、牧場のひとこま",
+          "title": "この表情が、気になって。",
+          "body": "写真をながめて、目や耳、模様を見つけてみる。一頭を身近に感じるための近況サンプルです。写真の実在個体の行動記録ではありません。",
+          "photo": "/assets/white-holstein.jpg"
+        },
+        {
+          "id": "shiro-b",
+          "label": "牛の暮らしを知るヒント",
+          "title": "食べる、休む。その繰り返しを大切に。",
+          "body": "牛にとって、飼料や水に届くこと、落ち着いて横になれる場所があることは日々のケアの基本です。この近況は、暮らしを想像する体験用の文章です。",
+          "photo": "/assets/white-holstein.jpg"
+        }
+      ]
+    },
+    {
+      "id": "sora",
+      "name": "そら",
+      "farmId": "meadow",
+      "photo": "/assets/yorkshire-cow.jpg",
+      "color": "#e4e8d9",
+      "breed": "体験用プロフィール・個体の品種は未確認",
+      "headline": "空の広さを、教えてくれる。",
+      "personality": "好奇心いっぱい",
+      "intro": "そらは、写真をきっかけに牛の暮らしを想像するための、体験用プロフィールです。気になる表情から、食べることや休むこと、牧場の毎日を少しずつ知ってみませんか。",
+      "charm": "広い草地に似合う、のんびりした横顔。",
+      "tags": [
+        "好奇心いっぱい",
+        "マイペース",
+        "仲間思い"
+      ],
+      "missions": [
+        "walk",
+        "rest",
+        "eat"
+      ],
+      "voice": "ひと息ついて、今日は自分のペースで。",
+      "moments": [
+        {
+          "id": "sora-a",
+          "label": "写真から想像する、牧場のひとこま",
+          "title": "この表情が、気になって。",
+          "body": "写真をながめて、目や耳、模様を見つけてみる。一頭を身近に感じるための近況サンプルです。写真の実在個体の行動記録ではありません。",
+          "photo": "/assets/yorkshire-cow.jpg"
+        },
+        {
+          "id": "sora-b",
+          "label": "牛の暮らしを知るヒント",
+          "title": "食べる、休む。その繰り返しを大切に。",
+          "body": "牛にとって、飼料や水に届くこと、落ち着いて横になれる場所があることは日々のケアの基本です。この近況は、暮らしを想像する体験用の文章です。",
+          "photo": "/assets/yorkshire-cow.jpg"
+        }
+      ]
+    },
+    {
+      "id": "fuku",
+      "name": "ふく",
+      "farmId": "meadow",
+      "photo": "/assets/grazing-holstein.jpg",
+      "color": "#e4e8d9",
+      "breed": "体験用プロフィール・個体の品種は未確認",
+      "headline": "もう少しだけ、そばで見ていたい。",
+      "personality": "観察好き",
+      "intro": "ふくは、写真をきっかけに牛の暮らしを想像するための、体験用プロフィールです。気になる表情から、食べることや休むこと、牧場の毎日を少しずつ知ってみませんか。",
+      "charm": "黒と白の模様と、近くで見た表情。",
+      "tags": [
+        "観察好き",
+        "マイペース",
+        "仲間思い"
+      ],
+      "missions": [
+        "ruminate",
+        "rest",
+        "eat"
+      ],
+      "voice": "ひと息ついて、今日は自分のペースで。",
+      "moments": [
+        {
+          "id": "fuku-a",
+          "label": "写真から想像する、牧場のひとこま",
+          "title": "この表情が、気になって。",
+          "body": "写真をながめて、目や耳、模様を見つけてみる。一頭を身近に感じるための近況サンプルです。写真の実在個体の行動記録ではありません。",
+          "photo": "/assets/grazing-holstein.jpg"
+        },
+        {
+          "id": "fuku-b",
+          "label": "牛の暮らしを知るヒント",
+          "title": "食べる、休む。その繰り返しを大切に。",
+          "body": "牛にとって、飼料や水に届くこと、落ち着いて横になれる場所があることは日々のケアの基本です。この近況は、暮らしを想像する体験用の文章です。",
+          "photo": "/assets/grazing-holstein.jpg"
+        }
+      ]
+    },
+    {
+      "id": "koharu",
+      "name": "こはる",
+      "farmId": "hill",
+      "photo": "/assets/jersey-rest.jpg",
+      "color": "#e4e8d9",
+      "breed": "体験用プロフィール・個体の品種は未確認",
+      "headline": "今日はここで、深呼吸。",
+      "personality": "のんびり屋さん",
+      "intro": "こはるは、写真をきっかけに牛の暮らしを想像するための、体験用プロフィールです。気になる表情から、食べることや休むこと、牧場の毎日を少しずつ知ってみませんか。",
+      "charm": "茶色と白の毛並みと、草地に立つ姿。",
+      "tags": [
+        "のんびり屋さん",
+        "マイペース",
+        "仲間思い"
+      ],
+      "missions": [
+        "rest",
+        "eat",
+        "walk"
+      ],
+      "voice": "ひと息ついて、今日は自分のペースで。",
+      "moments": [
+        {
+          "id": "koharu-a",
+          "label": "写真から想像する、牧場のひとこま",
+          "title": "この表情が、気になって。",
+          "body": "写真をながめて、目や耳、模様を見つけてみる。一頭を身近に感じるための近況サンプルです。写真の実在個体の行動記録ではありません。",
+          "photo": "/assets/jersey-rest.jpg"
+        },
+        {
+          "id": "koharu-b",
+          "label": "牛の暮らしを知るヒント",
+          "title": "食べる、休む。その繰り返しを大切に。",
+          "body": "牛にとって、飼料や水に届くこと、落ち着いて横になれる場所があることは日々のケアの基本です。この近況は、暮らしを想像する体験用の文章です。",
+          "photo": "/assets/jersey-rest.jpg"
         }
       ]
     }
@@ -239,10 +434,329 @@
     {
       "name": "Jametlene Reskp / Unsplash",
       "url": "https://unsplash.com/fr/photos/une-vache-debout-dans-un-champ-vgpidbwfi4M"
+    },
+    {
+      "name": "Verum",
+      "url": "https://commons.wikimedia.org/wiki/File:HF_in_der_Rh%C3%B6n_auf_der_Weide.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/pasture-holstein.jpg"
+    },
+    {
+      "name": "Littledumpy34",
+      "url": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/yorkshire-cow.jpg"
+    },
+    {
+      "name": "Keith Weller/USDA",
+      "url": "https://commons.wikimedia.org/wiki/File:Cow_female_black_white.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/holstein-portrait.jpg"
+    },
+    {
+      "name": "Homoatrox",
+      "url": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_cows_in_Belarus.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/herd-meadow.jpg"
+    },
+    {
+      "name": "Mikinisk",
+      "url": "https://commons.wikimedia.org/wiki/File:Row_of_Holstein_Friesian_cows_in_Bron%C3%B3w.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/herd-row.jpg"
+    },
+    {
+      "name": "Mikinisk",
+      "url": "https://commons.wikimedia.org/wiki/File:White_Holstein_Friesian_in_Bron%C3%B3w.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/white-holstein.jpg"
+    },
+    {
+      "name": "Carolyn Parsons",
+      "url": "https://commons.wikimedia.org/wiki/File:Holstein_Cow_Grazing_06.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/grazing-holstein.jpg"
+    },
+    {
+      "name": "MarcBogonovich",
+      "url": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_cattle_in_White_Creek_NY_20210925_092549.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/farm-morning.jpg"
+    },
+    {
+      "name": "USDAgov",
+      "url": "https://commons.wikimedia.org/wiki/File:A_Jersey_cow_relaxing_on_a_CRP_Grassland_site_in_Chippewa_County,_Michigan.jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/jersey-rest.jpg"
+    },
+    {
+      "name": "Zeynel Cebeci",
+      "url": "https://commons.wikimedia.org/wiki/File:Jersey_crossbred_cow,_Sisda%C4%9F%C4%B1_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/jersey-hillside.jpg"
+    },
+    {
+      "name": "U.S. Department of Agriculture\n\nBob Nichols/Photographer/United States Department of Agriculture-Office of Communications-Photography Services Division",
+      "url": "https://commons.wikimedia.org/wiki/File:Cow_with_ear_tag_(20130911-OC-RBN-3760_(9733482279)).jpg",
+      "license": "Public domain",
+      "licenseUrl": "",
+      "changes": "サイズ変更・JPEG再圧縮。表示枠に合わせてトリミングされる場合があります。",
+      "photo": "/assets/jersey-portrait.jpg"
     }
   ],
   "experiment": {
     "enabled": false,
     "defaultVariant": "B"
-  }
+  },
+  "featurePhoto": "/assets/farm-morning.jpg",
+  "gallery": [
+    {
+      "id": "photo-1",
+      "photo": "/assets/cow-0.jpg",
+      "title": "目が合う、という出会い。",
+      "alt": "近くからこちらを見る、黒と白の牛の顔",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Jan Huber / Unsplash",
+      "source": "https://unsplash.com/photos/black-and-white-cow-on-green-grass-field-during-daytime-sOSZl7IuX-I",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license"
+    },
+    {
+      "id": "photo-2",
+      "photo": "/assets/jersey-portrait.jpg",
+      "title": "やわらかな、茶色のまなざし。",
+      "alt": "草の上でこちらを見つめる茶色の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "U.S. Department of Agriculture\n\nBob Nichols/Photographer/United States Department of Agriculture-Office of Communications-Photography Services Division",
+      "source": "https://commons.wikimedia.org/wiki/File:Cow_with_ear_tag_(20130911-OC-RBN-3760_(9733482279)).jpg",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "photo-3",
+      "photo": "/assets/farm-morning.jpg",
+      "title": "草地に流れる、群れの時間。",
+      "alt": "木立の前の草地で過ごす複数の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "MarcBogonovich",
+      "source": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_cattle_in_White_Creek_NY_20210925_092549.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "photo-4",
+      "photo": "/assets/grazing-holstein.jpg",
+      "title": "その模様も、その子らしさ。",
+      "alt": "白い額の模様がある黒い牛の顔のアップ",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Carolyn Parsons",
+      "source": "https://commons.wikimedia.org/wiki/File:Holstein_Cow_Grazing_06.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "photo-5",
+      "photo": "/assets/yorkshire-cow.jpg",
+      "title": "緑の丘と、大きな木。",
+      "alt": "緑の丘で大きな木のそばに立つ白黒の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Littledumpy34",
+      "source": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_UK_Yorkshire_July_2011.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "photo-6",
+      "photo": "/assets/jersey-hillside.jpg",
+      "title": "広い景色の、小さなひと休み。",
+      "alt": "広い斜面の草地で横になっている牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Zeynel Cebeci",
+      "source": "https://commons.wikimedia.org/wiki/File:Jersey_crossbred_cow,_Sisda%C4%9F%C4%B1_02.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "photo-7",
+      "photo": "/assets/pasture-holstein.jpg",
+      "title": "草の上に、立ち止まる。",
+      "alt": "緑の草地に横向きで立っている白黒の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Verum",
+      "source": "https://commons.wikimedia.org/wiki/File:HF_in_der_Rh%C3%B6n_auf_der_Weide.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
+      "id": "photo-8",
+      "photo": "/assets/herd-row.jpg",
+      "title": "牛舎の毎日にも、目を向けて。",
+      "alt": "牛舎の飼槽に沿って並んでいる牛たち",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Mikinisk",
+      "source": "https://commons.wikimedia.org/wiki/File:Row_of_Holstein_Friesian_cows_in_Bron%C3%B3w.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "photo-9",
+      "photo": "/assets/white-holstein.jpg",
+      "title": "白い顔が、こんにちは。",
+      "alt": "牛舎の柵の向こうの白い顔の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Mikinisk",
+      "source": "https://commons.wikimedia.org/wiki/File:White_Holstein_Friesian_in_Bron%C3%B3w.jpg",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0"
+    },
+    {
+      "id": "photo-10",
+      "photo": "/assets/holstein-portrait.jpg",
+      "title": "黄色い花と、白黒模様。",
+      "alt": "黄色い花が咲く草地に立つ白黒の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Keith Weller/USDA",
+      "source": "https://commons.wikimedia.org/wiki/File:Cow_female_black_white.jpg",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "photo-11",
+      "photo": "/assets/jersey-rest.jpg",
+      "title": "雲の下を、自分のペースで。",
+      "alt": "青空と雲の下の草地に立つ茶色と白の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "USDAgov",
+      "source": "https://commons.wikimedia.org/wiki/File:A_Jersey_cow_relaxing_on_a_CRP_Grassland_site_in_Chippewa_County,_Michigan.jpg",
+      "license": "Public domain",
+      "licenseUrl": ""
+    },
+    {
+      "id": "photo-12",
+      "photo": "/assets/herd-meadow.jpg",
+      "title": "仲間の姿を、となりに。",
+      "alt": "展示会の囲いの中に並んで立つ白黒の牛",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Homoatrox",
+      "source": "https://commons.wikimedia.org/wiki/File:Holstein_Friesian_cows_in_Belarus.jpg",
+      "license": "CC BY-SA 3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0"
+    },
+    {
+      "id": "photo-13",
+      "photo": "/assets/cow-1.jpg",
+      "title": "今日も、牛に会いたくて。",
+      "alt": "牛のイメージ写真",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Josh Withers / Unsplash",
+      "source": "https://unsplash.com/photos/a-cow-standing-in-a-field-IpSEEdRZhyA",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license"
+    },
+    {
+      "id": "photo-14",
+      "photo": "/assets/cow-2.jpg",
+      "title": "一頭から、ひろがる物語。",
+      "alt": "牛のイメージ写真",
+      "description": "目や耳の向き、模様、まわりの景色。目に留まったことを、ゆっくり探してみてください。",
+      "credit": "Jametlene Reskp / Unsplash",
+      "source": "https://unsplash.com/fr/photos/une-vache-debout-dans-un-champ-vgpidbwfi4M",
+      "license": "Unsplash License",
+      "licenseUrl": "https://unsplash.com/license"
+    }
+  ],
+  "knowledge": [
+    {
+      "id": "rumination",
+      "short": "もぐもぐには、理由がある。",
+      "title": "草を栄養に変える、反すう。",
+      "category": "RUMINATION / 反すう",
+      "body": "食べたものを口に戻して、もう一度かむ。牛の胃には4つの区画があり、第一胃の微生物が草の繊維を分解するのを助けます。口を動かす、何気ない時間にも、体を支えるしくみがあります。",
+      "observe": "口もとの動きに気づいたら、反すうのしくみを思い出してみる。一枚の静止画から、実際に反すうしているかは判断できません。",
+      "photo": "/assets/grazing-holstein.jpg",
+      "alt": "白い額の模様がある牛の顔",
+      "source": "https://www.alic.go.jp/koho/kikaku03_001316.html",
+      "sourceName": "農畜産業振興機構「なぜ、牛の胃は4つもあるの？」"
+    },
+    {
+      "id": "resting",
+      "short": "休める場所を、整える。",
+      "title": "何気ない休息を、寝床が支える。",
+      "category": "RESTING / 横になる",
+      "body": "横になれる、清潔で乾いた場所。牛が自然に立ち上がり、横になれる空間を確保することも、日々の飼養管理で大切にされます。寝床の手入れは、休みやすい環境をつくるための仕事です。",
+      "observe": "牛が横になる場所はどこだろう。草地も牛舎も、実際の管理状況は写真だけでは分かりません。",
+      "photo": "/assets/jersey-hillside.jpg",
+      "alt": "草地の斜面で横になっている牛",
+      "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf",
+      "sourceName": "農林水産省「乳用牛の飼養管理に関する技術的な指針」第3"
+    },
+    {
+      "id": "water",
+      "short": "いつでも飲める水を。",
+      "title": "水に届くことも、毎日のケア。",
+      "category": "WATER / 水を飲む",
+      "body": "必要な水の量は、気温や乳量、飼料などによって変わります。いつでも十分な水を飲めること、飲水設備を清潔に保つことは、牛の毎日を支える基本です。",
+      "observe": "写真に写らない水飲み場にも、想像を広げてみる。牛の体調は、日々の飲み方や食べ方も含めて観察します。",
+      "photo": "/assets/pasture-holstein.jpg",
+      "alt": "草地に立つ牛",
+      "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf",
+      "sourceName": "農林水産省「乳用牛の飼養管理に関する技術的な指針」第2"
+    },
+    {
+      "id": "heat",
+      "short": "暑い日には、日陰と風を。",
+      "title": "夏の牧場には、暑さへの備え。",
+      "category": "COMFORT / 環境を整える",
+      "body": "気温や湿度、風通しなどは、牛の過ごしやすさに関わります。日陰や送風、十分な水など、環境に合った対策を行い、呼吸や行動の変化をよく見ることが大切です。",
+      "observe": "木陰や牛舎の風は、どんなふうに届くだろう。季節や飼い方によって、必要な対策は変わります。",
+      "photo": "/assets/yorkshire-cow.jpg",
+      "alt": "大きな木のある草地に立つ牛",
+      "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf",
+      "sourceName": "農林水産省「乳用牛の飼養管理に関する技術的な指針」第4"
+    },
+    {
+      "id": "herd",
+      "short": "仲間との距離にも、気を配る。",
+      "title": "一頭と、そのまわりの仲間たち。",
+      "category": "HERD / 群れで暮らす",
+      "body": "牛群の中には社会的な関係があります。群れの組み替えや、採食・飲水場所をめぐる競合に配慮することも管理の一部。みんなが飼料や水に届き、休める環境を考えます。",
+      "observe": "近くにいる牛や、食べる場所に目を向けてみる。並んだ姿だけで、仲のよさや気持ちまでは断定できません。",
+      "photo": "/assets/farm-morning.jpg",
+      "alt": "草地で過ごす牛の群れ",
+      "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf",
+      "sourceName": "農林水産省「乳用牛の飼養管理に関する技術的な指針」第1・15"
+    },
+    {
+      "id": "observation",
+      "short": "いつもと違う、に気づく。",
+      "title": "食べ方、歩き方、休み方を見守る。",
+      "category": "DAILY CARE / 日々の観察",
+      "body": "一頭ずつの様子を継続して見ることは、ケアの出発点。飼料や水の摂取、行動、歩き方などを観察し、気になる変化を早めに把握します。かわいさの向こうに、積み重ねられる毎日の仕事があります。",
+      "observe": "牛舎の通路や飼槽は、どう整えられているだろう。写真の表情から健康や幸福を判定せず、日々の観察の大切さを知ってみる。",
+      "photo": "/assets/herd-row.jpg",
+      "alt": "牛舎の飼槽に沿って並ぶ牛",
+      "source": "https://www.maff.go.jp/j/chikusan/sinko/attach/pdf/animal_welfare-135.pdf",
+      "sourceName": "農林水産省「乳用牛の飼養管理に関する技術的な指針」第1・1、第6・1"
+    }
+  ]
 }
